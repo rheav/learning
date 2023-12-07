@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="design.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:500,700"
+			rel="stylesheet"
+		/>
+		<!-- <script src="https://cdn.tailwindcss.com"/> -->
+	</head>
+	<body class="">
+		<main class="main-container">
+			<div class="board-block">
+				<span class="summary-label">buttons</span>
+				<div class="buttons-block">
+					<div class="default-btn">
+						<p>Default</p>
+						<button class="btn btn-primary">Primary Button</button>
+						<button class="btn btn-second">Secondary Button</button>
+					</div>
+					<div class="hovered-btn">
+						<p>Hovered</p>
+						<button class="btn btn-primary">Primary Button</button>
+						<button class="btn btn-second">Secondary Button</button>
+					</div>
+				</div>
+			</div>
+			<div class="board-block">
+				<span class="summary-label">colors</span>
+				<div class="color-box-container">
+					<div class="color-box">#24234C</div>
+					<div class="color-box">#738BFD</div>
+					<div class="color-box">#F55623</div>
+					<div class="color-box">#767E96</div>
+					<div class="color-box">#E9EAED</div>
+					<div class="color-box">#F3F4F6</div>
+				</div>
+			</div>
+			<div class="board-block">
+				<span class="summary-label">inputs</span>
+				<div class="forms-block">
+					<label for="full-name">Full Name</label>
+					<span
+						><input
+							type="text"
+							name="full-name"
+							id="full-name"
+							placeholder="ex. Lida Owen"
+						/>
+						<span>Default</span>
+					</span>
+				</div>
+				<div class="forms-block">
+					<label for="full-name">Your Name</label>
+					<span
+						><input
+							type="text"
+							name="full-name"
+							id="test"
+							placeholder="Anthony Webb"
+						/>
+						<span>Filled</span>
+					</span>
+				</div>
+				<div class="forms-block">
+					<label for="full-name">Password</label>
+					<span
+						><input
+							type="text"
+							name="full-name"
+							id="test"
+							placeholder="5+ characters"
+						/>
+						<div>Your password must be at least <b>6 characters long.</b></div>
+						<span class="span-description"><p>Focused with error message</p></span>
+					</span>
+				</div>
+				<div class="forms-block">
+					<label for="full-name">Email Address</label>
+					<span
+						><input
+							type="text"
+							name="full-name"
+							id="test"
+							placeholder=""
+							value="myemail@address.com"
+						/>
+						<span>Inactive</span>
+					</span>
+				</div>
+			</div>
+			<div class="board-block">
+				<span class="summary-label">FONTS <span style="text-transform: capitalize">- Montserrat</span> </span>
+				<div class="typography-block">
+					<h1>Page Title | 28px Bold #1E1A50</h1>
+					<h2>Secondary Title | 16px Bold #1E1A50</h2>
+					<h3>Tertiary Title | 14px Bold #1A2950</h3>
+					<a href="#">Link | Montserrat 14px Medium #738BFD</a>
+					<p class="input-p">Input Placeholder | 14px Medium #767E96</p>
+					<p class="basic-p">Basic Paragraph | 12px Medium #1A2950</p>
+					<p class="board-p">Board Summary Label | 12px Medium #767E96</p>
+					<p class="alert-p">Alert Message | 12px Medium #F55623</p>
+				</div>
+			</div>
+			<div class="board-block">
+				<span class="summary-label">cards</span>
+				<div class="card-block">
+					<div class="">
+						<p>Default Card Background</p>
+						<div class="card"></div>
+					</div>
+					<div class="">
+						<p>Hovered Card Background</p>
+						<div class="card"></div>
+					</div>
+				</div>
+			</div>
+			<div class="board-block">
+				<span class="summary-label">ICONS</span>
+				<div class="icons-block">
+					<ion-icon name="chevron-down-outline"></ion-icon>
+					<ion-icon name="calendar-outline"></ion-icon>
+					<ion-icon name="pencil-outline"></ion-icon>
+					<ion-icon name="ellipsis-vertical"></ion-icon>
+					<ion-icon name="pencil-outline"></ion-icon>
+					<ion-icon name="search-outline"></ion-icon>
+					<ion-icon name="menu-outline"></ion-icon>
+					<ion-icon name="grid"></ion-icon>
+					<ion-icon name="add-outline"></ion-icon>
+					<ion-icon name="person-circle"></ion-icon>
+					<ion-icon name="images-outline"></ion-icon>
+				</div>
+			</div>
+		</main>
+		<script src="script.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+	</body>
+</html>
