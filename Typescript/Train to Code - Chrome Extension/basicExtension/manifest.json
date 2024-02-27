@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "My Study Extension",
+  "version": "1.0.0",
+  "icons": {
+    "32": "gtm.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["*://*/"]
+}

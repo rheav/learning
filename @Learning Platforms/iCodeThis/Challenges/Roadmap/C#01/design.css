@@ -1,0 +1,324 @@
+/* RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* VARIABLES */
+
+:root {
+	--white: #FFF;
+	--gray-1: #F3F4F6;
+	--gray-2: #E9EAED;
+	--gray-3: #767E96;
+	--danger: #F55623;
+	--violet: #738BFD;
+	--dark-blue: #24234C;
+}
+
+/* UTILITY CLASSES */
+
+
+/* DESIGNS */
+
+body {
+	background-color: var(--white);
+	font-family: 'Montserrat', sans-serif;
+	padding: 2rem 0;
+}
+
+.btn {
+	height: 3rem;
+	width: 12rem;
+	border-radius: 6px;
+	border: none;
+	font-style: normal;
+	margin: 0.5rem 0;
+	font-size: .875rem;
+}
+
+.hovered-btn>button {
+	box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+	background-color: var(--dark-blue);
+	color: var(--gray-1);
+}
+
+.btn-secondary {
+	background-color: var(--gray-2);
+	color: var(--dark-blue);
+}
+
+.main-container {
+	width: 95dvw;
+	margin: auto auto;
+	padding: 4rem 0rem;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.board-block {
+	border-left: 1px solid var(--gray-2);
+	width: 100%;
+	padding: 1rem 1.5rem;
+
+}
+
+.summary-label {
+	margin-left: -1.5rem;
+	text-transform: uppercase;
+	color: var(--gray-3);
+	font-weight: 500;
+	background-color: var(--gray-2);
+	padding: 0.125rem 1.25rem;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	font-size: 0.75rem;
+}
+
+.buttons-block,
+.card-block {
+	display: grid;
+	justify-content: start;
+	grid-auto-flow: column;
+	gap: 2rem;
+
+
+	& div {
+		color: var(--gray-3);
+		font-style: italic;
+		font-size: 0.75rem;
+		display: grid;
+		justify-items: center;
+		margin-top: 1rem;
+
+
+	}
+
+	& div p {}
+}
+
+.forms-block {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	padding: 0.5rem 0;
+	width: 100%;
+
+	&:nth-child(4) {
+		margin-bottom: 1rem;
+	}
+
+	& label {
+		font-weight: bold;
+		font-size: 0.875rem;
+		margin-bottom: 0.25rem;
+	}
+
+	& input {
+		border-radius: 6px;
+		padding: 0 .75rem;
+		flex: 0 0 75%;
+		height: 3rem;
+		border: 2px solid var(--gray-2);
+		margin-right: 1rem;
+		font-size: .75rem;
+		color: var(--dark-blue);
+
+	}
+
+	& input:focus {
+		border: 2px solid var(--violet);
+		outline: none;
+	}
+
+
+
+	& ::placeholder {
+		color: var(--gray-3);
+		font-size: .875rem;
+	}
+
+	& span {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	& span>span {
+		color: var(--gray-3);
+		font-style: italic;
+		font-size: 0.75rem;
+	}
+
+	& .span-description p {
+		overflow-wrap: normal;
+		width: 9rem;
+	}
+
+
+	& span>div {
+		color: var(--danger);
+		font-size: 0.75rem;
+		position: absolute;
+		top: calc(3rem + 5px);
+	}
+}
+
+.card {
+	width: 180px;
+	height: 100px;
+	box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+
+}
+
+.card-block div:nth-child(2) .card {
+	box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.1);
+}
+
+.color-box-container {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	padding-top: 2rem;
+}
+
+.color-box {
+	width: 3.5rem;
+	height: 3.5rem;
+	color: var(--white);
+	font-size: 0.625rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.color-box-container .color-box:nth-last-child(-n+2) {
+	color: var(--dark-blue);
+}
+
+.typography-block * {
+	margin: 1rem 0;
+}
+
+.typography-block h1 {
+	font-size: 1.75rem;
+}
+
+.typography-block h2 {
+	font-size: 1rem;
+}
+
+.typography-block h3,
+a,
+p {
+	font-size: 0.875rem;
+}
+
+.typography-block p:nth-last-child(-n+3) {
+	font-size: 0.75rem;
+}
+
+.typography-block h3 {
+	color: #1A2950;
+}
+
+.typography-block a {
+	color: var(--violet);
+	text-decoration: none;
+}
+
+.input-p,
+.board-p {
+	color: var(--gray-3);
+}
+
+.alert-p {
+	color: var(--danger);
+}
+
+.icons-block {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	flex-wrap: wrap;
+	max-width: 85%;
+	padding-top: 1.5rem;
+}
+
+ion-icon {
+	font-size: 2.125rem;
+}
+
+ion-icon:nth-last-child(-n+2) {
+	color: var(--gray-3);
+	opacity: 0.4;
+}

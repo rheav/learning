@@ -1,0 +1,214 @@
+/* RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* -------------------------------------- STYLES --------------------------*/
+
+body {
+    height: 100dvh;
+    overflow: hidden;
+    background: #333;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Love Ya Like A Sister', cursive;
+    position: relative;
+}
+
+.card {
+    background-color: #FFFFFF;
+    width: 25rem;
+    height: 27rem;
+    border-radius: 8px;
+    border-top-right-radius: 25px;
+    box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.card .close-x {
+    align-self: flex-end;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #c4c4c4;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.card img {
+    height: auto;
+    width: 8rem;
+}
+
+.card h1 {
+    font-family: 'Mountains of Christmas', serif;
+    margin: 0.75rem auto 1.5rem;
+}
+
+.card h3 {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0.5rem auto 1rem;
+}
+
+.card h2 {
+    font-size: 0.875rem;
+    color: #DEAD5D;
+    margin-bottom: 2rem;
+}
+
+.card button {
+    background-color: #232E4D;
+    text-transform: lowercase;
+    color: #fff;
+    width: calc(90% - 4rem);
+    padding: 0.625rem 0.1rem;
+    border-radius: 4px;
+    letter-spacing: 0.125rem;
+    transition: 0.3s all ease-in;
+    border: transparent;
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #DEAD5D;
+    color: #232E4D;
+    transform: translateY(0.25rem);
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.006),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.008),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.01),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.012),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.014),
+        100px 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+.snow,
+.snow::before,
+.snow::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image:
+        radial-gradient(4px 4px at 100px 50px, #fafafa, transparent),
+        radial-gradient(6px 6px at 200px 150px, #fafafa, transparent),
+        radial-gradient(3px 3px at 300px 250px, #fafafa, transparent),
+        radial-gradient(4px 4px at 400px 350px, #fafafa, transparent),
+        radial-gradient(6px 6px at 500px 100px, #fafafa, transparent),
+        radial-gradient(3px 3px at 50px 200px, #fafafa, transparent),
+        radial-gradient(4px 4px at 150px 300px, #fafafa, transparent),
+        radial-gradient(6px 6px at 250px 400px, #fafafa, transparent),
+        radial-gradient(3px 3px at 300px 500px, #fafafa, transparent);
+    background-size: 650px, 650px;
+
+    animation: snowAnimation 3s linear infinite;
+}
+
+.snow::before {
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 9s;
+}
+
+.snow::after {
+    margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 7s;
+}
+
+@keyframes snowAnimation {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(650px);
+    }
+}
